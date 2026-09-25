@@ -4,6 +4,9 @@
 > training, tack, lifecycle, custom-coat, breeding, and ability resources integrate through
 > its public exports and lifecycle events. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
+Implemented optional resources currently include `bcc-horse-training`,
+`bcc-horse-abilities`, and `bcc-horse-trading`.
+
 ## Description
 
 Embark on an adventure through the untamed wilderness of the Old West with bcc-horses! Here, your trusty steed awaits, ready to be personalized with unique mane styles, tail variations, coat colors, and stylish accessories. Groom, feed, and clean your horse to keep them at peak performance.

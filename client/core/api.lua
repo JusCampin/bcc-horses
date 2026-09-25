@@ -25,6 +25,12 @@ exports('IsActiveHorse', function(horseId)
     return horse ~= nil and (horseId == nil or tonumber(horse.id) == tonumber(horseId))
 end)
 
+exports('ReturnActiveHorse', function()
+    if type(FleeHorse) ~= 'function' then return false end
+    FleeHorse()
+    return true
+end)
+
 exports('AcquireInteractionLock', function(featureName)
     if type(featureName) ~= 'string' or featureName == '' then return false end
     if next(interactionLocks) ~= nil and interactionLocks[featureName] ~= true then return false end

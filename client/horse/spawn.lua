@@ -575,7 +575,6 @@ function SpawnHorse(data, spawnOptions)
     TriggerServerEvent('bcc-horses:RegisterInventory', MyHorseId)
     Entity(horse).state:set('myHorseId', MyHorseId, true)
 
-    TriggerEvent('bcc-horses:TradeHorse')
     TriggerEvent('bcc-horses:HorsePrompts')
 
     HorseAppearance.resetTracking(horse)

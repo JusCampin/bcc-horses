@@ -46,7 +46,6 @@ client_scripts {
     'client/tack/controller.lua',
     'client/tack/session.lua',
     'client/horse/death.lua',
-    'client/horse/trade.lua',
     'client/horse/prompts.lua',
     'client/core/main.lua',
     'client/core/commands.lua',
@@ -71,7 +70,6 @@ server_scripts {
     'server/horse/death.lua',
     'server/horse/purchase.lua',
     'server/horse/sale.lua',
-    'server/horse/trade.lua',
     'server/core/main.lua'
 }
 

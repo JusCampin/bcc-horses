@@ -23,7 +23,6 @@ Config = {
     controls = {
         openStable = 0x80F28E95,   -- L: open the stable menu.
         stableAction = 0x27D1C284, -- R: call or return a horse at a stable.
-        tradeHorse = 0x27D1C284,   -- R: offer the active horse to another player.
         -- Context-sensitive horse care prompt: drink from natural water or a trough, or eat nearby hay.
         drink = 0xD8F73058,        -- U
         rest = 0x620A6C5E,         -- V: make the horse rest.
@@ -114,21 +113,6 @@ Config = {
             'consumable_apple',
         },
         reviver = 'consumable_horse_reviver', -- Item used to revive a writhing horse.
-        flamingHooves = {
-            enabled = true,                   -- Allow the flaming-hooves item effect.
-            name = 'diamond',                 -- Inventory item that activates the effect.
-            durationMinutes = 2,              -- Length of the effect after each use.
-            requiredBondingLevel = 4,         -- Required bonding level; use 0 to allow every horse.
-            cooldownMinutes = 10,             -- Wait time before the same character can use it again.
-            expiryWarningSeconds = 10,        -- Warn the player this many seconds before the effect ends.
-            goldenHealthCore = true,          -- Fill and fortify the horse's health core during the effect.
-            goldenStaminaCore = true,         -- Fill and fortify the horse's stamina core during the effect.
-            fearResistance = true,            -- Temporarily suppress shock and gunshot flee reactions.
-            rearOnActivation = true,          -- Make the horse rear when the effect starts.
-            durabilityEnabled = true,         -- Consume item durability when activated.
-            maximumDurability = 100,          -- Durability assigned to a new item.
-            durabilityUsedPerAction = 5,      -- Durability consumed per activation.
-        },
     },
     -----------------------------------------------------
 

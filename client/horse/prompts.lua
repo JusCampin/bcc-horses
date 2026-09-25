@@ -4,9 +4,6 @@ ShopGroup = GetRandomIntInRange(0, 0xffffff)
 LootHorse = 0
 LootGroup = GetRandomIntInRange(0, 0xffffff)
 
-TradeHorse = 0
-TradeGroup = GetRandomIntInRange(0, 0xffffff)
-
 local TARGET_INFO_CONTEXT <const> = 35
 local HORSE_FLEE_CONTEXT <const> = 33
 local TARGET_PROMPT_DISTANCE <const> = 2.8
@@ -104,8 +101,6 @@ function StartPrompts()
     OpenShop = registerPrompt(keys.openStable, promptText('shopPrompt', 'Open Stable'), ShopGroup)
     OpenCall = registerPrompt(keys.stableAction, promptText('callPrompt', 'Call Active Horse'), ShopGroup)
     OpenReturn = registerPrompt(keys.stableAction, promptText('returnPrompt', 'Return Horse'), ShopGroup)
-
-    TradeHorse = registerPrompt(keys.tradeHorse, promptText('tradePrompt', 'Trade Horse'), TradeGroup, 2000, true)
 
     LootHorse = registerPrompt(keys.lootHorse, promptText('lootHorsePrompt', 'Open'), LootGroup, nil, true)
 

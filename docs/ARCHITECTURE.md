@@ -12,7 +12,10 @@ selection, progression, stable access, and the authoritative `bcc_player_horses`
 - `bcc-horse-lifecycle`: aging, injuries, retirement, and natural death.
 - `bcc-horse-coats`: custom coat catalogs, ownership, genetics metadata, and appearance application.
 - `bcc-horse-breeding`: breeding eligibility, lineage, pregnancy, foals, traits, and inheritance.
-- `bcc-horse-abilities`: flaming hooves and future optional special effects.
+- `bcc-horse-abilities`: flaming hooves and future optional special effects. It owns ability
+  items, durability, cooldowns, temporary effects, and ability-specific configuration.
+- `bcc-horse-trading`: player-to-player proposals and consent. The feature owns its prompt
+  and handshake session, while core performs the authoritative ownership transfer.
 
 Feature resources must validate horses through `bcc-horses` exports and must not directly
 change ownership, selection, XP, core stats, or death state in `bcc_player_horses`.
@@ -21,6 +24,7 @@ change ownership, selection, XP, core stats, or death state in `bcc_player_horse
 
 - `GetActiveHorse()` returns the active entity and its current horse metadata.
 - `IsActiveHorse(horseId)` checks the active horse, optionally by database ID.
+- `ReturnActiveHorse()` sends the active horse away through the core return flow.
 - `AcquireInteractionLock(featureName)` reserves horse interaction control for one feature.
 - `ReleaseInteractionLock(featureName)` releases that interaction reservation.
 
@@ -33,6 +37,9 @@ change ownership, selection, XP, core stats, or death state in `bcc_player_horse
 - `IsHorseNearby(source, horseId, distance)` validates proximity to a spawned horse.
 - `AddHorseXp(source, horseId, amount, reason)` securely awards XP to that player's living
   horse. This export is server-only and is the supported progression integration point.
+- `GetHorseLimit(source)` returns the character's current stable capacity.
+- `TransferHorse(senderSource, recipientSource, horseId)` performs a validated ownership
+  transfer after an external feature establishes consent.
 
 ## Lifecycle events
 
